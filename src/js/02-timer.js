@@ -52,7 +52,7 @@ const addLeadingZero = value => {
 
 const onClick = () => {
   setInterval(() => {
-    actualDate = new Date();
+    let actualDate = new Date();
     if (chosenDate - actualDate >= 0) {
       convertedDate = convertMs(chosenDate - actualDate);
       dataDays.innerHTML = addLeadingZero(convertedDate.days);
