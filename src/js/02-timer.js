@@ -54,7 +54,7 @@ const onClick = () => {
   setInterval(() => {
     let actualDate = new Date();
     if (chosenDate - actualDate >= 0) {
-      convertedDate = convertMs(chosenDate - actualDate);
+      const convertedDate = convertMs(chosenDate - actualDate);
       dataDays.innerHTML = addLeadingZero(convertedDate.days);
       dataHours.innerHTML = addLeadingZero(convertedDate.hours);
       dataMinutes.innerHTML = addLeadingZero(convertedDate.minutes);
@@ -65,6 +65,7 @@ const onClick = () => {
       dataMinutes.innerHTML = '00';
       dataSeconds.innerHTML = '00';
     }
+    startButton.disabled = true;
   }, 1000);
 };
 
